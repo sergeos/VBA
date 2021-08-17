@@ -23,10 +23,8 @@ Private Sub UserForm_Initialize()
 '   Fill the list box
     For i = 1 To 12
         Data(i, 1) = Format(DateSerial(TheYr, i, 1), "mmmm")
-    Next i
-    For i = 1 To 12
         Data(i, 2) = Day(DateSerial(TheYr, i + 1, 1) - 1)
-    Next i
+    Next
     ListBox1.ColumnCount = 2
     ListBox1.List = Data
 End Sub
